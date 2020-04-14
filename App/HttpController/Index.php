@@ -12,7 +12,7 @@ class Index extends Controller
     public function index()
     {
 
-        $this->response()->write('Hello World!');
+        $this->response()->write('Hello World!333');
         // $file = EASYSWOOLE_ROOT.'/vendor/easyswoole/easyswoole/src/Resource/Http/welcome.html';
         // if(!is_file($file)){
         //     $file = EASYSWOOLE_ROOT.'/src/Resource/Http/welcome.html';
