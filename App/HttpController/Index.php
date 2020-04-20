@@ -11,21 +11,16 @@ class Index extends Controller
 
     public function index()
     {
-
-        $this->response()->write('Hello World!333');
-        // $file = EASYSWOOLE_ROOT.'/vendor/easyswoole/easyswoole/src/Resource/Http/welcome.html';
-        // if(!is_file($file)){
-        //     $file = EASYSWOOLE_ROOT.'/src/Resource/Http/welcome.html';
-        // }
-        // $this->response()->write(file_get_contents($file));
+        $info = 'NOW IS ' . date('Y-m-d H:i:s');
+        $this->response()->write($info);
     }
 
     protected function actionNotFound(?string $action)
     {
         $this->response()->withStatus(404);
-        $file = EASYSWOOLE_ROOT.'/vendor/easyswoole/easyswoole/src/Resource/Http/404.html';
-        if(!is_file($file)){
-            $file = EASYSWOOLE_ROOT.'/src/Resource/Http/404.html';
+        $file = EASYSWOOLE_ROOT . '/vendor/easyswoole/easyswoole/src/Resource/Http/404.html';
+        if (!is_file($file)) {
+            $file = EASYSWOOLE_ROOT . '/src/Resource/Http/404.html';
         }
         $this->response()->write(file_get_contents($file));
     }
