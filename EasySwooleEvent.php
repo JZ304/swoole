@@ -24,7 +24,6 @@ class EasySwooleEvent implements Event
         /**
          * **************** websocket控制器 **********************
          */
-        echo '6666';
         // 创建一个 Dispatcher 配置
         $conf = new \EasySwoole\Socket\Config();
         // 设置 Dispatcher 为 WebSocket 模式
